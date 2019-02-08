@@ -1,0 +1,29 @@
+{
+  "name": "@karmared/amqp-transport",
+  "version": "0.0.1",
+  "description": "AMQP Transport",
+  "main": "src/index.js",
+  "author": "Eugene Kovalev",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf build && babel src -d build",
+    "build:package": "node scripts/build-package",
+    "prepublish": "yarn build && yarn build:package",
+    "test:consumer": "babel-node test/consumer",
+    "test:producer": "babel-node test/producer"
+  },
+  "dependencies": {
+    "amqplib": "^0.5.3",
+    "generic-pool": "^3.6.1",
+    "msgpack": "^1.0.2",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-proposal-export-default-from": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
+    "dotenv": "^6.2.0"
+  }
+}
