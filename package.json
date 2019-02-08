@@ -1,6 +1,6 @@
 {
   "name": "@karmared/amqp-transport",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "AMQP Transport",
   "main": "src/index.js",
   "author": "Eugene Kovalev",
